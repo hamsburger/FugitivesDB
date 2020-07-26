@@ -1,0 +1,68 @@
+.form_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 80vh;
+  background-color: #f4bd42;
+  color: white;
+}
+
+/* Make sure login and register pages are not squished */
+#login {
+  min-height: 500px;
+}
+
+#register {
+  min-height: 800px;
+}
+
+.form_title {
+  position: relative;
+  top: 10px;
+  color: white;
+  height: 50px;
+  width: inherit;
+  font-weight: 200;
+  font-size: 30px;
+  text-align: center;
+  font-family: Monospace, Arial, Helvetica, sans-serif;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+#loginImageContainer {
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 160.67px;
+}
+
+#loginImage {
+  position: relative;
+  max-width: 100%;
+}
+
+.icon-image-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  position: absolute;
+  top: 1px;
+  margin-left: 5px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.form-check-inline {
+  margin: 10px;
+}
+
+/*# sourceMappingURL=form.css.map */

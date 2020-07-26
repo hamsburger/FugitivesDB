@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Start up node
+cd "/c/Users/harri/Documents/Programming/WebDev/Projects/fugitives_list"
+node app.js & 
+cd fugitives  
+npm run build && serve -s build -l 3000
+

@@ -1,0 +1,38 @@
+@import "./mixins"; 
+
+.card {
+    position: relative;
+    width: 20%;
+    margin: 10px;
+    max-height: 500px;
+    transition: 0.5s;
+    @include box-shadow(0.1); 
+} .card:hover{
+    @include box-shadow(0.5);
+}
+
+.card-title {
+    text-align: center;
+    padding: 10px;
+}
+
+.card-title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    overflow-y: auto;
+}
+
+.card-img-top {
+    max-height: 300px;
+}
+
+@media (max-width: 600px){
+    .card-img-top {
+        max-height: none;
+        height: 100%;
+    }
+}
