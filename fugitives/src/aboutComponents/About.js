@@ -4,11 +4,8 @@ export default class About extends React.Component{
     render(){
         return(
             <div id = "aboutText"> 
-            This.
-            <br />
-            We are a non-profit organization, hoping to make
-            people realize the evil behind pursuing desires at the cost 
-            of others.
+                A list of fugitives scraped from Wikipedia:
+                <a href="https://en.wikipedia.org/wiki/List_of_fugitives_from_justice_who_disappeared"></a>
             </div> 
         );
     }

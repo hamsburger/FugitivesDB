@@ -4,6 +4,7 @@ let bodyParser = require("body-parser");
 let cors = require("cors"); 
 var multer = require('multer');
 var upload = multer();
+var PORT = process.env.PORT || 4000
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,8 +22,7 @@ let database = require("./routes/loginroutes/loginroutes");
 app.use('/register', database.register);
 app.use('/getCards', database.getCardImages);
 
-let port = 4000;
-app.listen(port, function(err){
+app.listen(PORT, function(err){
   if (err) console.log("Listening failed");
-  console.log("Connection Successful to " + port);
+  console.log("Connection Successful to " + PORT);
 }); 

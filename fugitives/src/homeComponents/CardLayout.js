@@ -30,7 +30,7 @@ export default class CardLayout extends React.Component{
             }
         }).then(json => {
             this.setState({imageLinks : JSON.stringify(json)});
-            alert(this.state.imageLinks);
+
         }).catch(err => alert(err));
 
         // Initial Run when no data 
@@ -52,7 +52,6 @@ export default class CardLayout extends React.Component{
         // s = s.replace(/[\u0000-\u0019]+/g,"");
 
         let objArr = JSON.parse(this.state.imageLinks);
-        alert(typeof(objArr));
         let cards = [];
         for (let obj of objArr){
             cards.push(<Card title={obj["name"]} href={obj["imageLink"]} description={obj["description"]}></Card>)
