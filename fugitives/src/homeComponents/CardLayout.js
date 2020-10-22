@@ -21,7 +21,7 @@ export default class CardLayout extends React.Component{
     async renderCard(){
         
         // actual request (No need for preflight here.) 
-        await fetch("http://localhost:4000/getCards", {
+        await fetch("/getCards", {
             method : "GET",
             "Content-Type" : "application/json"
         }).then(response => {
