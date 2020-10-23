@@ -24,14 +24,14 @@ function connectionLoop(){
     connection.connect(function(err){
         if (err){ 
             console.log(err.stack);
-            setTimeout(handleDisconnect, 2000);
+            setTimeout(connectionLoop, 2000);
         }
         else console.log("Connected to MySQL Database");
     });
     connection.on('error', function(err) {
         console.log('db error', err);
         if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
-          handleDisconnect();                         // lost due to either server restart, or a
+          connectionLoop();                         // lost due to either server restart, or a
         } else {                                      // connnection idle timeout (the wait_timeout
           throw err;                                  // server variable configures this)
         }

@@ -149,7 +149,7 @@ export default class Register extends React.Component{
                     <label className="form-check-label" htmlFor="genderCheck1">
                         Male  
                     </label>
-                    <div className="icon-image-container"><img className="icon" src={maleUser} alt="male icon"/></div>
+                    <div className="icon-image-container"><img className="icon" src={maleUser} alt="maleIcon"/></div>
                 </div>
                 <div className="form-check form-check-inline">
                     <input className="form-check-input" type="radio" name="gender" value="female" 
