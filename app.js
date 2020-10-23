@@ -5,7 +5,7 @@ let cors = require("cors");
 var multer = require('multer');
 var upload = multer();
 var path = require("path");
-var PORT = process.env.PORT || 4000
+var PORT =  4000 || process.env.PORT
 
 app.use(express.static(path.join(__dirname, 'fugitives', 'build')));
 app.use(bodyParser.json());

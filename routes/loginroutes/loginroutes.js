@@ -88,13 +88,11 @@ exports.getCardImages = async function(req, res){
             console.log(err.stack);
             return;
         }
-        console.log(results);
         if (!results) return;
         // Store all images
         for (let i = 0; i < results.length; i++){
             cardLinks.push(results[i]);
         }        
-        console.log(cardLinks);
         res.send(cardLinks);
     }); 
 
