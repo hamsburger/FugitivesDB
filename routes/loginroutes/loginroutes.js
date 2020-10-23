@@ -11,17 +11,34 @@ let emailDB = new Trie();
 
 /* Connection authenticated with mysql_native_password
 and does not use the new 8.0 connection. */ 
-let connection = mysql.createConnection({
+const dbconfig = {
     host: 'us-cdbr-east-02.cleardb.com',
     user : 'b9e53a433b254b',
     password : '68a2c4f6',
     database : 'heroku_7dbefc7a764d487',
-}); 
+}
 
-connection.connect(function(err){
-    if (err) console.log(err.stack);
-    else console.log("Connected to MySQL Database");
-});
+let connection;
+function connectionLoop(){
+    connection = mysql.createConnection(dbconfig); 
+    connection.connect(function(err){
+        if (err){ 
+            console.log(err.stack);
+            setTimeout(handleDisconnect, 2000);
+        }
+        else console.log("Connected to MySQL Database");
+    });
+    connection.on('error', function(err) {
+        console.log('db error', err);
+        if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
+          handleDisconnect();                         // lost due to either server restart, or a
+        } else {                                      // connnection idle timeout (the wait_timeout
+          throw err;                                  // server variable configures this)
+        }
+    });
+}
+connectionLoop()
+
 
 
 let columns = [`username`, `email`];
