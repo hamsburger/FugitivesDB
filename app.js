@@ -4,6 +4,7 @@ let bodyParser = require("body-parser");
 let cors = require("cors"); 
 var multer = require('multer');
 var upload = multer();
+var path = require("path");
 var PORT = process.env.PORT || 4000
 
 app.use(bodyParser.json());
