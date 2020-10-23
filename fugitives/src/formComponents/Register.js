@@ -15,8 +15,8 @@ export default class Register extends React.Component{
         error : {}}; 
         this.tagError = "Only alphanumerics, underscores and dashes please."; // Input should only allow underscores, dashes + alphanumerics 
         this.emptyError = "Please enter a value.";  
-        this.baseURL = "http://localhost:3000";
-        this.requestURL = "http://localhost:4000/register";
+        this.baseURL = "/";
+        this.requestURL = "/register";
     }
     
     updateInfo(e){

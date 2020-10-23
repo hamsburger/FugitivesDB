@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.14a925b3.chunk.css",
+    "main.js": "/static/js/main.9c52561e.chunk.js",
+    "main.js.map": "/static/js/main.9c52561e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8c40394c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8c40394c.js.map",
+    "static/js/2.b7bd8378.chunk.js": "/static/js/2.b7bd8378.chunk.js",
+    "static/js/2.b7bd8378.chunk.js.map": "/static/js/2.b7bd8378.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f55353fe99f710d39f84cab86869ee05.js": "/precache-manifest.f55353fe99f710d39f84cab86869ee05.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.14a925b3.chunk.css.map": "/static/css/main.14a925b3.chunk.css.map",
+    "static/js/2.b7bd8378.chunk.js.LICENSE.txt": "/static/js/2.b7bd8378.chunk.js.LICENSE.txt",
+    "static/media/gold_face.jpg": "/static/media/gold_face.e91ba49d.jpg",
+    "static/media/maleUser.png": "/static/media/maleUser.16fce02f.png",
+    "static/media/neutralUser.png": "/static/media/neutralUser.09df78e0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c40394c.js",
+    "static/js/2.b7bd8378.chunk.js",
+    "static/css/main.14a925b3.chunk.css",
+    "static/js/main.9c52561e.chunk.js"
+  ]
+}

@@ -12,11 +12,10 @@ let emailDB = new Trie();
 /* Connection authenticated with mysql_native_password
 and does not use the new 8.0 connection. */ 
 let connection = mysql.createConnection({
-    host: 'localhost',
-    user : 'root',
-    password : 'NyankoDeux2-2',
-    database : 'fugitivesdb',
-    port: 3306
+    host: 'us-cdbr-east-02.cleardb.com',
+    user : 'b9e53a433b254b',
+    password : '68a2c4f6',
+    database : 'heroku_7dbefc7a764d487',
 }); 
 
 connection.connect(function(err){
@@ -34,6 +33,8 @@ connection.query("SELECT ?? from ??", [columns, `users`], function(err, results,
         console.log(err.stack);
         return;
     }
+    console.log(results);
+    if (!results) return;
 
     for (let i = 0; i < results.length; i++){
         userDB.insert(results[i].username);
@@ -82,8 +83,13 @@ exports.register = async function(req, res){
 
 exports.getCardImages = async function(req, res){
     let cardLinks = [];
-    connection.query('SELECT ?? from ??', ['*', 'fugitives'], function(err, results, fields){
-        
+    connection.query('SELECT * from ??', ['fugitives'], function(err, results, fields){
+        if (err) {
+            console.log(err.stack);
+            return;
+        }
+        console.log(results);
+        if (!results) return;
         // Store all images
         for (let i = 0; i < results.length; i++){
             cardLinks.push(results[i]);

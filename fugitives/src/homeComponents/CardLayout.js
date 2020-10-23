@@ -19,9 +19,9 @@ export default class CardLayout extends React.Component{
     } // render 
 
     async renderCard(){
-        
+        let error = false;
         // actual request (No need for preflight here.) 
-        await fetch("http://localhost:4000/getCards", {
+        await fetch("/getCards", {
             method : "GET",
             "Content-Type" : "application/json"
         }).then(response => {
@@ -31,10 +31,13 @@ export default class CardLayout extends React.Component{
         }).then(json => {
             this.setState({imageLinks : JSON.stringify(json)});
 
-        }).catch(err => alert(err));
+        }).catch(err => { 
+            alert(err)
+            error = true 
+        } );
 
         // Initial Run when no data 
-        if(!!this.state.displayedArray.length) return;
+        if(!!this.state.displayedArray.length || error) return;
 
         // let s = this.state.imageLinks;
     
